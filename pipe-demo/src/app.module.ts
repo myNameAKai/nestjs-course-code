@@ -2,9 +2,10 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CommonPipeModule } from './common-pipe/common-pipe.module';
+import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [CommonPipeModule],
+  imports: [CommonPipeModule, UserModule],
   controllers: [AppController],
   providers: [AppService],
 })
